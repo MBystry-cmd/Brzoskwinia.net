@@ -1,0 +1,41 @@
+<header>
+    <nav class="navbar navbar-expand-lg">
+        
+        <div class="container px-4 px-lg-5">
+            <a class="navbar-brand" href="/"><img class="logo" src="/logo.png" alt="..." height="36">Brzoskwinia.net</a>
+
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
+
+            
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav ms-auto w-90 justify-content-end">
+                    <li class="nav-item"><a class="nav-link active" aria-current="page" href="/">Strona główna</a></li>
+                    <li class="nav-item"><a class="nav-link active" href="#!">Ulubione</a></li>
+                    <li class="nav-item"><a class="nav-link active" href="#!">Kontakt</a></li>
+
+                    {{# if session.admin_permission}}
+                    <li class="nav-item"><a class="nav-link active" href="/admin/panel"> Admin Panel</a></li>
+                    {{else}}
+                    {{/if}}
+
+                    {{# if session.loggedin}}
+                    <li class="nav-item"><a class="nav-link active" href="/user/logout"><i class="bi bi-box-arrow-in-left"></i> Wyloguj się</a></li>
+                    {{else}}
+                    <li class="nav-item"><a class="nav-link active" href="/user/signin"><i class="bi bi-person-circle me-1"></i> Zaloguj się</a></li>
+                    {{/if}}
+                </ul>
+
+                {{# if session.loggedin}}
+                <form class="d-flex" action="/cart">
+                    <button class="btn btn-outline-dark" type="submit">
+                        <i class="bi-cart-fill me-1"></i>
+                        Koszyk
+                        <span class="badge bg-dark text-white ms-1 rounded-pill">{{session.cart_quantity}}</span>
+                    </button>
+                </form>
+                {{else}}
+                {{/if}}
+            </div>
+        </div>
+    </nav>
+</header>

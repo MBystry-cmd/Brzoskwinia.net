@@ -1,0 +1,69 @@
+.navbar-brand, .navbar-brand:hover, .navbar-brand:visited{
+    color: #D44D41;
+    font-size: 28px;
+    font-weight: 800;
+    letter-spacing: 0;
+}
+
+.category{
+    font-size: 32px;
+    color: #2D2D2D;
+    font-weight: 900;
+    letter-spacing: 0;
+}
+
+.logo{
+    margin-right: 10px;
+}
+
+body
+{
+    margin: 0;
+    font-family: Lato;
+    padding: 0;
+    background-color: white;
+}
+
+
+
+.form-signin {
+    max-width: 330px;
+    padding: 15px;
+}
+
+.form-signin input[type="email"] {
+    margin-bottom: -1px;
+    border-bottom-right-radius: 0;
+    border-bottom-left-radius: 0;
+}
+
+.password_input{
+    margin-bottom: -1px;
+    border-radius: 0;
+}
+.password_input2{
+    margin-bottom: 10px;
+    border-top-left-radius: 0;
+    border-top-right-radius: 0;
+}
+
+
+/*---------------AdminPanel--------------*/
+.form-signin-admin {
+    max-width: 530px;
+    padding: 15px;
+}
+.firstInput{
+    margin-bottom: -1px;
+    border-bottom-right-radius: 0;
+    border-bottom-left-radius: 0;
+}
+.inputMiddle{
+    margin-bottom: -1px;
+    border-radius: 0;
+}
+.lastInput{
+    margin-bottom: 10px;
+    border-top-left-radius: 0;
+    border-top-right-radius: 0;
+}

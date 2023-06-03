@@ -1,0 +1,39 @@
+<main class="form-signin w-100 m-auto">
+  <form action="/admin/panel" method="post">
+    {{# if hasError}}
+    <div class="alert alert-danger" role="alert">
+        {{this.errors}}
+    </div>
+    {{else}}
+    {{/if}}
+    
+    <h1 class="h3 mb-3 fw-normal">Dodawanie nowych produktów</h1>
+
+    <div class="form-floating">
+      <input type="text" name="name" class="form-control firstInput" id="floatingInput">
+      <label for="floatingInput">Nazwa Produktu</label>
+    </div>
+
+    <div class="form-floating">
+      <input type="number" name="quantity" class="form-control inputMiddle" id="floatingQuantity" min="0" value="0" placeholder="0">
+      <label for="floatingQuantity">Zapas na magazynie</label>
+    </div>
+
+    <div class="form-floating">
+      <input type="url" name="img" class="form-control inputMiddle" id="floatingImage">
+      <label for="floatingImage">Link do zdjęcia</label>
+    </div>
+
+    <div class="form-floating">
+      <textarea class="form-control inputMiddle" name="description" id="TextArea" rows="3"></textarea>
+      <label for="TextArea">Opis produktu</label>
+    </div>
+
+    <div class="form-floating">
+      <input type="number" name="cost" class="form-control lastInput" id="floatingCost" min="0" value="0" placeholder="0">
+      <label for="floatingCost">Cena</label>
+    </div>
+
+    <button class="w-100 btn btn-lg btn-primary" type="submit">Dodaj produkt</button>
+  </form>
+</main>
